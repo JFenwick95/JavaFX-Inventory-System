@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifyProductController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="1200.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="57.0" layoutY="40.0" text="Inventory Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d9dfe4" height="477.0" layoutX="30.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="1140.0" />
+      <Button fx:id="ModifyProductCancelButton" layoutX="1077.0" layoutY="515.0" mnemonicParsing="false" onAction="#ModifyProductCancelButtonPress" prefHeight="25.0" prefWidth="63.0" text="Cancel" />
+      <Button fx:id="ModifyProductSaveButton" layoutX="1077.0" layoutY="483.0" mnemonicParsing="false" onAction="#ModifyProductSaveButtonPress" prefHeight="25.0" prefWidth="63.0" text="Save" />
+      <Label layoutX="57.0" layoutY="102.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="225.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="275.0" text="Inv">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="179.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="325.0" text="Price/Cost">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="375.0" text="Max">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ModifyProductIDField" disable="true" layoutX="175.0" layoutY="175.0" text="Auto Gen- Disabled">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ModifyProductNameField" layoutX="175.0" layoutY="225.0" />
+      <TextField fx:id="ModifyProductInvField" layoutX="175.0" layoutY="275.0" />
+      <TextField fx:id="ModifyProductPriceField" layoutX="175.0" layoutY="325.0" />
+      <TextField fx:id="ModifyProductMaxField" layoutX="175.0" layoutY="375.0" />
+      <TextField fx:id="ModifyProductMinField" layoutX="175.0" layoutY="425.0" />
+      <Label layoutX="100.0" layoutY="425.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="AddPartPartAddedLabel" alignment="CENTER" layoutX="522.0" layoutY="142.0" prefHeight="50.0" prefWidth="600.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="AllPartsTable" layoutX="550.0" layoutY="143.0" prefHeight="170.0" prefWidth="483.0">
+         <columns>
+            <TableColumn fx:id="AllPartIdColumn" prefWidth="60.0" text="Part ID" />
+            <TableColumn fx:id="AllPartNameColumn" prefWidth="125.0" text="Part Name" />
+            <TableColumn fx:id="AllPartInvColumn" prefWidth="110.0" text="Inventory Level" />
+            <TableColumn fx:id="AllPartPriceColumn" prefWidth="187.0" text="Price / Cost per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="AssociatedPartsTable" layoutX="550.0" layoutY="353.0" prefHeight="170.0" prefWidth="483.0">
+         <columns>
+            <TableColumn fx:id="AssociatedPartIdColumn" prefWidth="60.0" text="Part ID" />
+            <TableColumn fx:id="AssociatedPartNameColumn" prefWidth="125.0" text="Part Name" />
+            <TableColumn fx:id="AssociatedPartInvColumn" prefWidth="110.0" text="Inventory Level" />
+            <TableColumn fx:id="AssociatedPartPriceColumn" prefWidth="187.0" text="Price / Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="ModifyPartAssociatedButton" layoutX="854.0" layoutY="316.0" mnemonicParsing="false" onAction="#ModifyPartAssociatedButtonPress" prefHeight="25.0" prefWidth="149.0" text="Add" />
+      <Button fx:id="ModifyRemovePartAssociatedButton" layoutX="854.0" layoutY="531.0" mnemonicParsing="false" onAction="#ModifyRemovePartAssociatedButtonPress" prefHeight="25.0" prefWidth="149.0" text="Remove Associated Part" />
+      <Label fx:id="ModifyProductAnnounceLabel" layoutX="202.0" layoutY="104.0" prefHeight="50.0" prefWidth="339.0">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="AddPartsSearch" layoutX="875.0" layoutY="117.0" onAction="#AddPartsSearchButtonPress" prefHeight="25.0" prefWidth="158.0" promptText="Search by Part ID or Name" />
+   </children>
+</AnchorPane>
